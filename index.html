@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progetto 3</title>
     <link href="styles.css" rel="stylesheet">
+    <script src = "main.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,54 +14,36 @@
     </header>
     
     <nav>
-        <button>Show all</button>
-        <button>Only dogs</button>
-        <button>Only cats</button>
-        <button>Only rabbits</button>
+        <button data-filter-animal="all">Show all</button>
+        <button data-filter-animal="dog">Only dogs</button>
+        <button data-filter-animal="cat">Only cats</button>
+        <button data-filter-animal="rabbit">Only rabbits</button>
     </nav>
 
-    <main>
-        <article>
-            <section class="animal-card-text">
-                <h1> Nome animale</h1>
-                <small>
-                    <span>2 years old </span> -
-                    <span>cat</span>
-                </small>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                     Modi hic vitae excepturi facere iusto numquam officiis alias 
-                     enim odit magnam illum quaerat repellendus aperiam, labore dolore fuga! Cumque, repellat exercitationem?
-                </p>
-                <button>
-                    <a href="http://www.google.com" target="_blank" class="adopt-button"> Adopt me</a>
-                </button>
-            </section>
-            <section class="animal-card-photo">
-                <img src="static/dog2.webp">
-            </section>
-        </article>
-
-         <article>
-            <section class="animal-card-text">
-                <h1> Nome animale</h1>
-                <small>
-                    <span>2 years old </span> -
-                    <span>cat</span>
-                </small>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                     Modi hic vitae excepturi facere iusto numquam officiis alias 
-                
-                </p>
-                <button>
-                    <a href="http://www.google.com" target="_blank" class="adopt-button"> Adopt me</a>
-                </button>
-            </section>
-            <section class="animal-card-photo">
-                <img src="static/dog2.webp">
-            </section>
-        </article>
+    <main>   
+        <template id="animal-card-template">
+            <article>
+                <section class="animal-card-text">
+                    <h1> Nome animale </h1>
+                    <small>
+                        <span class="eta">2 years old</span> - 
+                        <span class="specie">dog</span>
+                    </small>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur mollitia sed nemo cum deleniti, eaque soluta? Eveniet ducimus a, tempora dolor necessitatibus distinctio. Laboriosam vero nam illo, nulla in doloribus.
+                    </p>
+                    <button>
+                        <a href="https://www.google.com" target="_blank" class="adopt-button">
+                            Adopt me
+                        </a>
+                    </button>
+                </section>
+                <section class="animal-card-photo">
+                    <img src="static/dog2.webp">
+                </section>
+            </article>
+        </template>
     </main>
+
 </body>
 </html>
